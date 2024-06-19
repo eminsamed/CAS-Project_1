@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo List</title>
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="controls">
+      <button id="create-todo-btn">Create new todo</button>
+      <button id="toggle-style-btn">Toggle Style</button>
+    </div>
+    <div class="sort-buttons-container">
+      <div class="sort-buttons">
+        <button id="sort-by-name">Name <span class="sort-arrow" id="name-arrow">▼</span></button>
+        <button id="sort-by-due-date">By Due Date <span class="sort-arrow" id="due-date-arrow">▼</span></button>
+        <button id="sort-by-creation-date">By Creation Date <span class="sort-arrow"
+            id="creation-date-arrow">▼</span></button>
+        <button id="sort-by-importance">By Importance <span class="sort-arrow" id="importance-arrow">▼</span></button>
+      </div>
+      <div>
+        <button id="filter-completed-btn">Filter Completed</button>
+      </div>
+    </div>
+    <div id="todo-list">
+      <!-- Yapılacaklar burada görünecek -->
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="todo-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <form id="todo-form">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" placeholder="Enter title" required>
+
+        <label for="importance">Importance</label>
+        <input type="number" id="importance" name="importance" max="5" placeholder="">
+
+        <label for="due-date">Due Date</label>
+        <input type="date" id="due-date" name="due-date">
+
+        <input type="checkbox" id="finished" name="finished">
+        <span for="finished">Finished</span>
+
+        <label for="description">Description</label>
+        <textarea id="description" name="description" required></textarea>
+
+        <div class="form-buttons">
+          <button type="submit" id="create-btn">Create</button>
+          <button type="button" id="create-overview-btn">Create & Overview</button>
+          <button type="button" id="overview-btn">Overview</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="./scripts/app.js"></script>
+</body>
+
+</html>
