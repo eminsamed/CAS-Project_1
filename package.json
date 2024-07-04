@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint": "eslint .",
     "prettier": "prettier --write \"**/*.{js,css,html}\""
@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "eslint": "^7.32.0",
+    "nodemon": "^3.1.4",
     "prettier": "^2.3.2",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0"
